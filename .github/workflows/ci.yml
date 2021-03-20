@@ -17,7 +17,7 @@ jobs:
 
     - name: Build and run the docker container
       run: |
-        docker build -t html-server-image:v1 
+        docker build -t html-server-image:v1 .
         docker run -d -p 80:80 html-server-image:v1
 
 # - uses: mr-smithers-excellent/docker-build-push@v5
