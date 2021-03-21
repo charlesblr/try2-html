@@ -19,7 +19,8 @@ jobs:
         run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
       - name: Push Docker Image to DockerHub
         run: |
-          docker tag $IMAGE_NAME:${{ github.run_number }} 
+          docker tag $IMAGE_NAME:${{ github.run_number }} $IMAGE_NAME:latest
           docker push $IMAGE_NAME:${{ github.run_number }}
+          docker push $IMAGE_NAME:latest 
 
-# problem with credential auth ?
+# problem with credential auth 
