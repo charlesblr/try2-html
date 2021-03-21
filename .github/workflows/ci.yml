@@ -23,3 +23,4 @@ jobs:
           docker push $IMAGE_NAME:${{ github.run_number }}
           docker push $IMAGE_NAME:latest 
 
+# problem with credential auth ?
